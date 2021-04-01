@@ -11,7 +11,10 @@ textarea {
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+  margin-top: 5px;
+  box-shadow: none;
 }
+
 
 .jumbotron {
   text-align: center;
@@ -22,16 +25,20 @@ textarea {
 }
 
 .description {
-  white-space: pre-wrap;
+  /* white-space: pre-wrap; */
 }
 
 .time-block {
   text-align: center;
-  border-radius: 15px;
+  /* border-radius: 15px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .row {
-  white-space: pre-wrap;
+  /* white-space: pre-wrap; */
   height: 80px;
   border-top: 1px solid white;
 }
@@ -63,6 +70,10 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .saveBtn i:hover {

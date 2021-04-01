@@ -2,11 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />  
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./assets/css/style.css"/>
     <title>Work Day Scheduler</title>
@@ -22,57 +33,69 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <table class="table">
-        <tbody>
-          <tr class="row">
-            <td class="col hour">9am</td>
-            <td class="col-8 time-block present">
-              <input class="description" type="text">
-            </td>
-            <td class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></td>
-          </tr>
-          <tr class="row">
-            <td class="col hour">10am</td>
-            <td class="col-8 time-block present"></td>
-            <td class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></td>
-          </tr>        
-          <tr class="row">
-            <td class="col hour">11am</td>
-            <td class="col-8 time-block present"></td>
-            <td class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></td>
-          </tr>
-          <tr class="row">
-            <td class="col hour">12pm</td>
-            <td class="col-8 time-block present"></td>
-            <td class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></td>
-          </tr>
-          <tr class="row">
-            <td class="col hour">1pm</td>
-            <td class="col-8 time-block present"></td>
-            <td class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></td>
-          </tr>
-          <tr class="row">
-            <td class="col hour">2pm</td>
-            <td class="col-8 time-block present"></td>
-            <td class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></td>
-          </tr>
-          <tr class="row">
-            <td class="col hour">3pm</td>
-            <td class="col-8 time-block present"></td>
-            <td class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></td>
-          </tr>
-          <tr class="row">
-            <td class="col hour hour">4pm</td>
-            <td class="col-8 time-block present"></td>
-            <td class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></td>
-          </tr>
-          <tr class="row">
-            <td class="col hour">5pm</td>
-            <td class="col-8 time-block present"></td>
-            <td class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></td>
-          </tr>
-        </tbody>
-      </table>
+          <div class="row my-auto justify-center">
+            <div class="col hour text-center time-block"><p class="">9am</p> </div>
+            <div class="col-8 data-entry">
+              <textarea class="form-control bg-transparent border-0 shadow-none" id="" aria-describedby=""></textarea>
+            </div>
+            <div class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></div>
+          </div>
+          <div class="row">
+            <div class="col hour">10am</div>
+            <div class="data-entry description col-8">
+              <textarea class="form-control bg-transparent border-0 shadow-none" id="" aria-describedby=""></textarea>
+            </div>
+            <div class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></div>
+          </div>
+          <div class="row">
+            <div class="col hour">11am</div>
+            <div class="data-entry description col-8">
+              <textarea class="form-control bg-transparent border-0 shadow-none" id="" aria-describedby=""></textarea>
+            </div>
+            <div class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></div>
+          </div>
+          <div class="row">
+            <div class="col hour">12pm</div>
+            <div class="data-entry description col-8">
+              <textarea class="form-control bg-transparent border-0 shadow-none" id="" aria-describedby=""></textarea>
+            </div>
+            <div class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></div>
+          </div>
+          <div class="row">
+            <div class="col hour">1pm</div>
+            <div class="data-entry description col-8">
+              <textarea class="form-control bg-transparent border-0 shadow-none" id="" aria-describedby=""></textarea>
+            </div>
+            <div class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></div>
+          </div>
+          <div class="row">
+            <div class="col hour">2pm</div>
+            <div class="data-entry description col-8">
+              <textarea class="form-control bg-transparent border-0 shadow-none" id="" aria-describedby=""></textarea>
+            </div>
+            <div class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></div>
+          </div>
+          <div class="row">
+            <div class="col hour">3pm</div>
+            <div class="data-entry description col-8">
+              <textarea class="form-control bg-transparent border-0 shadow-none" id="" aria-describedby=""></textarea>
+            </div>
+            <div class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></div>
+          </div>
+          <div class="row">
+            <div class="col hour">4pm</div>
+            <div class="data-entry description col-8">
+              <textarea class="form-control bg-transparent border-0 shadow-none" id="" aria-describedby=""></textarea>
+            </div>
+            <div class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></div>
+          </div>
+          <div class="row">
+            <div class="col hour">5pm</div>
+            <div class="data-entry description col-8">
+              <textarea class="form-control bg-transparent border-0 shadow-none" id="" aria-describedby=""></textarea>
+            </div>
+            <div class="col saveBtn text-center"><i class="bi bi-calendar-check-fill"></i></div>
+          </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
