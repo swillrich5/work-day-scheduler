@@ -1,25 +1,25 @@
+    // the field where the date will be displayed in the jumbotron
 var currentDay = document.querySelector("#currentDay");
+    // the columns (divs) in the planner hwere the event descriptions will be displayed
+    // used to set the background color according to time of day
 var timeColumns = document.querySelectorAll(".data-entry");
-var inputField = document.querySelectorAll(".input-field");
+    // the actual textAreas that will hold the event descriptions
 var textAreas = document.querySelectorAll("textarea");
+    // the array that holds the event objects
 var savedCalendarEvents = [];
 
 
-
-
+// sets the color of each time row according to the time of day
+// use var currentHour = moment("12pm", "hA").format("H"); for testing
+// if time of day is after 5pm.
 function setTimeColumnBackground(rightNow) {
-    // var currentHour = moment("12pm", "hA").format("H");
-    var currentHour = moment().format("H");    // console.log(currentHour);
+    var currentHour = moment().format("H");    
     for (var i=0; i < timeColumns.length; i++) {
-        // console.log("currentHour = " + currentHour + " i+9 = " + (i+9) + " i = " + i);
-        // console.log((currentHour == (i+9)));
         if (currentHour == (i+9)) {  // present hour
             timeColumns[i].classList.remove("past");
             timeColumns[i].classList.remove("future");
             timeColumns[i].classList.add("present");
-
         } else if (currentHour > (i+9)) {  // past hours
-            // console.log("before noon");
             timeColumns[i].classList.remove("present");
             timeColumns[i].classList.remove("future");
             timeColumns[i].classList.add("past");
@@ -29,16 +29,15 @@ function setTimeColumnBackground(rightNow) {
             timeColumns[i].classList.add("future");
         }
     }
-
 }
 
+
+// when site first loads, check local storage for prior entries
+// if they exist, grab them from local storage, display them and
+// put them in an array for adds, changes, deletes
 function setUpAppointmentArray() {
     var storedCalendarEvents = JSON.parse(localStorage.getItem("calendarEvents"));
     if (storedCalendarEvents === null) {
-        // savedCalendarEvents[0] = { 
-        //     description: "",
-        //     time: i
-        // }
         for (var i = 0; i < 9; i++) {
             savedCalendarEvents.push( {
                 description: "",
@@ -55,7 +54,9 @@ function setUpAppointmentArray() {
 }
 
 
-// handle displaying the time
+// grabs the current date from moment() and displays it in the jumbotron
+// calls setTimeColumnBackground to set the background of the hour rows
+// based on time of day
 function displayTime() {
     var rightNow = moment().format('MMM DD, YYYY');
     currentDay.textContent = rightNow;
@@ -64,9 +65,17 @@ function displayTime() {
 
 
 
+// --------------------------------------------------------------------
+// ------------------->> application sarting point <<------------------
+// --------------------------------------------------------------------
 setUpAppointmentArray()
 setInterval(displayTime, 1000);
 
+
+
+// sets up an event listener for each button on the screen that
+// grabs any changes to the textareas in each row and writes them
+// to local storage
 document.querySelectorAll('.saveBtn').forEach(item => {
     item.addEventListener('click', event => {
         var calendarEvent = { };
@@ -77,8 +86,6 @@ document.querySelectorAll('.saveBtn').forEach(item => {
                 calendarEvent.time = i;
                 savedCalendarEvents[i].description = calendarEvent.description;
                 localStorage.setItem("calendarEvents", JSON.stringify(savedCalendarEvents));
-
-
             }
         }
     })

@@ -15,7 +15,6 @@ textarea {
   box-shadow: none;
 }
 
-
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -24,13 +23,8 @@ textarea {
   border-bottom: 10px solid black;
 }
 
-.description {
-  /* white-space: pre-wrap; */
-}
-
 .time-block {
   text-align: center;
-  /* border-radius: 15px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -38,7 +32,6 @@ textarea {
 }
 
 .row {
-  /* white-space: pre-wrap; */
   height: 80px;
   border-top: 1px solid white;
 }
